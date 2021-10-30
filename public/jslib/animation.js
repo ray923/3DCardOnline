@@ -1,15 +1,16 @@
 //Movement Animation to happen
 //Moving Animation Event
-document.querySelector(".animation_container").addEventListener("mousemove", (e)=>{
-  let xAxis = (window.innerWidth/2 - e.pageX)/25;
-  let yAxis = (window.innerHeight/2 - e.pageY)/25;
+document.querySelector(".animation_container").addEventListener("mousemove", (e) => {
+  let xAxis = (window.innerWidth/2 - e.pageX)/10;
+  let yAxis = (window.innerHeight/2 - e.pageY)/10;
   document.querySelector(".card").style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
 
 //Animate In
-document.querySelector(".animation_container").addEventListener("mouseenter", e=>{
+document.querySelector(".animation_container").addEventListener("mouseenter", e => {
   document.querySelector(".card").style.transition = 'none';
   //Popout
+  console.log(document.querySelector('.title'));
   document.querySelector('.title').style.transform = 'translateZ(150px)';
   document.querySelector('.sneaker img').style.transform = 'translateZ(200px) rotateZ(-45deg)';
   document.querySelector('.info h3').style.transform = 'translateZ(125px)';
